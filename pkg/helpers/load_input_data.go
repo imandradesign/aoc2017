@@ -10,7 +10,8 @@ import (
 
 const dataDirEnvVar = "AOC_DATA_DIR"
 
-func loadInputData(day string) ([]string, error) {
+// Pull puzzle input data from a *.txt file in the /data dir in this repo.
+func LoadInputData(day string) ([]string, error) {
 	dataDir, ok := os.LookupEnv(dataDirEnvVar)
 	if !ok {
 		return []string{}, fmt.Errorf("%s not set in your env", dataDirEnvVar)
